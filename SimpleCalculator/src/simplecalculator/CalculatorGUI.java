@@ -11,6 +11,8 @@ package simplecalculator;
  * @author luba_
  */
 public class CalculatorGUI {
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

@@ -1,5 +1,16 @@
 package simplecalculator;
 
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author luba_
+ */
+public class CalculatorGUI {
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,11 +18,11 @@ import java.awt.event.ActionListener;
 
 public class CalculatorGUI extends JFrame {
 
-    JButton button1 = new JButton("Сложение");
-    JButton button2 = new JButton("Вычитание");
-    JButton button3 = new JButton("Деление");
-    JButton button4 = new JButton("Умножение");
-    JButton button5 = new JButton("Возведение в степень");
+    JButton button1 = new JButton("Г‘Г«Г®Г¦ГҐГ­ГЁГҐ");
+    JButton button2 = new JButton("Г‚Г»Г·ГЁГІГ Г­ГЁГҐ");
+    JButton button3 = new JButton("Г„ГҐГ«ГҐГ­ГЁГҐ");
+    JButton button4 = new JButton("Г“Г¬Г­Г®Г¦ГҐГ­ГЁГҐ");
+    JButton button5 = new JButton("Г‚Г®Г§ГўГҐГ¤ГҐГ­ГЁГҐ Гў Г±ГІГҐГЇГҐГ­Гј");
     JTextField a = new JTextField("", 10);
     JTextField b = new JTextField("", 10);
     JLabel result = new JLabel("");

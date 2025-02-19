@@ -8,5 +8,11 @@
  * @author luba_
  */
 public class Calculator {
-    
+    public static double multiply(double a, double b) {
+        return (a * b);
+    }
+
+    public static double divide(double a, double b) throws ArithmeticException {
+        return (a / b);
+    }
 }

@@ -17,4 +17,13 @@ public class Calculator {
     public static double divide(double a, double b) throws ArithmeticException {
         return (a / b);
     }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    public int substract(int a, int b) {
+        return a - b;
+    }
+    
 }

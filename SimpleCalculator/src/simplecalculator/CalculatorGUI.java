@@ -10,7 +10,7 @@ package simplecalculator;
  *
  * @author luba_
  */
-public class CalculatorGUI {
+
 
 
 import javax.swing.*;

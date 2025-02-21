@@ -91,14 +91,15 @@ public class CalculatorGUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             var calc = new Calculator();
-            result.setText(String.valueOf(calc.add(Integer.parseInt(a.getText()), Integer.parseInt(b.getText()))));
+            result.setText(String.valueOf(calc.add(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
         }
     }
 
     private class Event2 implements ActionListener {
     @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(5);
+            var calc = new Calculator();
+            result.setText(String.valueOf(calc.substract(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
         }
         
     }
@@ -106,23 +107,36 @@ public class CalculatorGUI extends JFrame {
     private class Event3 implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(5);
+            var calc = new Calculator();
+            result.setText(String.valueOf(calc.multiply(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
         }
     }
 
     private class Event4 implements ActionListener {
     @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(5);
+        try {
+            var calc = new Calculator();
+            result.setText(String.valueOf(calc.divide(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
+        }
+        catch (ArithmeticException ex) {
+                    result.setText("Error: Invalid input for divide calculation.");
         }
         }
+    }
     
 
     private class Event5 implements ActionListener {
     @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(5);
+            try {
+            var calc = new Calculator();
+            result.setText(String.valueOf(calc.multiply(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
+            }
+        catch (ArithmeticException ex) {
+                    result.setText("Error: Invalid input for power calculation.");
         }
         }
+    }
     
 }

@@ -5,10 +5,10 @@ public class Calculator {
 
     
     
-    public static double power(double a, double b) {
+    public double power(double a, double b) {
         if (a == 0) {
             if (b > 0) {
-                return 0;  
+                return 0; 
             } else if (b < 0) {
                 throw new ArithmeticException();
             } else {
@@ -17,29 +17,42 @@ public class Calculator {
         }
 
         if (a < 0 && (b % 1 != 0)) {
-            throw new ArithmeticException();  
-        }
-        
-        if(b == 0) {
-            return 1; 
+            throw new ArithmeticException();
         }
 
-        return Math.pow(a, b);
+        if (b == 0) {
+            return 1;
+        }
+
+
+        double result = Math.pow(a, b);
+
+        if (Double.isInfinite(result)) {
+            throw new ArithmeticException(); 
+        }
+        if (Double.isNaN(result)) {
+             throw new ArithmeticException(); 
+        }
+
+        return result;
     }
 
-    public static double multiply(double a, double b) {
+    public double multiply(double a, double b) {
         return (a * b);
     }
 
-    public static double divide(double a, double b) throws ArithmeticException {
-        return (a / b);
+    public double divide(double a, double b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException(); 
+        }
+        return a / b;
     }
 
-    public int add(int a, int b) {
+    public double add(double a, double b) {
         return a + b;
     }
     
-    public int substract(int a, int b) {
+    public double substract(double a, double b) {
         return a - b;
     }
     

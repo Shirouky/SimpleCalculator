@@ -131,7 +131,7 @@ public class CalculatorGUI extends JFrame {
         public void actionPerformed(ActionEvent e) {
             try {
             var calc = new Calculator();
-            result.setText(String.valueOf(calc.multiply(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
+            result.setText(String.valueOf(calc.power(Double.parseDouble(a.getText()), Double.parseDouble(b.getText()))));
             }
         catch (ArithmeticException ex) {
                     result.setText("Error: Invalid input for power calculation.");
